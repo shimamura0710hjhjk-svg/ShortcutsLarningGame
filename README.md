@@ -1,0 +1,2 @@
+# ShortcutsLarningGame
+ショートカットキーを覚えてもらうためのゲームを作りたいぞ。
