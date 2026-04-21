@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ショートカット練習</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>お題：コピー（Ctrl + C）を押して！</h1>
+    <h2 id="result" style="color: blue;">入力待ち...</h2>
+
+    <script>
+        // キーボードが押された時に実行される
+        window.addEventListener('keydown', (event) => {
+            // event.preventDefault() はブラウザ本来の動き（コピー等）を止める魔法
+            event.preventDefault();
+
+            const resultElement = document.getElementById('result');
+
+            // 判定ロジック：Ctrlキーが押されていて、かつ「c」が押されたか
+            if (event.ctrlKey && event.key.toLowerCase() === 'c') {
+                resultElement.innerText = "正解！素晴らしい！";
+                resultElement.style.color = "green";
+            } else {
+                resultElement.innerText = "それは違うキーだね...";
+                resultElement.style.color = "red";
+            }
+        });
+    </script>
+</body>
+</html>
